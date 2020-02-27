@@ -4,13 +4,11 @@
 // Purposes: Make a Calendar from a given date
 // Date: 2/25/20
 
-#include <iostream>
-#include <iomanip>
-#include <cmath>
+
+
+#include "Justifier.h"
 
 using namespace std;
-
-
 
 
 int main() {
