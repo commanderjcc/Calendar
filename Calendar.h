@@ -11,13 +11,14 @@
 #include "Date.h"
 
 class Calendar {
-private:
-//    Date * dates[31];
-    std::wstring cellTemplate = L"\x256D\x2500\x2500\x256ETEST";
 public:
-    Calendar();\
+//    Date * dates[31];
+    std::string cellTemplate[3] = {u8" ╭────────────────╮ ",
+                                   u8" │       ①        │ ",
+                                   u8" ╰────────────────╯ "};
+    Calendar();
 
-    std::wstring getTopTemplate();
+    std::string getTopTemplate();
 };
 
 #endif //CALENDAR_CALENDAR_H

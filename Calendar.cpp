@@ -15,8 +15,8 @@ Calendar::Calendar() {
 //    }
 }
 
-wstring Calendar::getTopTemplate() {
-    return cellTemplate;
+string Calendar::getTopTemplate() {
+    return this->cellTemplate[0];
 }
 
 #endif //CALENDAR_CALENDAR
