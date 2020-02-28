@@ -22,27 +22,51 @@ int main() {
     auto myCal = new Calendar();
     cout << endl << myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0];
     cout << endl << myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1];
-    cout << endl << myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1];
     cout << endl << myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2];
+    cout << endl << myCal->cellTemplate[3]<< myCal->cellTemplate[3]<< myCal->cellTemplate[3]<< myCal->cellTemplate[3]<< myCal->cellTemplate[3]<< myCal->cellTemplate[3]<< myCal->cellTemplate[3];
+    cout << endl << myCal->cellTemplate[4]<< myCal->cellTemplate[4]<< myCal->cellTemplate[4]<< myCal->cellTemplate[4]<< myCal->cellTemplate[4]<< myCal->cellTemplate[4]<< myCal->cellTemplate[4];
+    cout << endl << myCal->cellTemplate[5]<< myCal->cellTemplate[5]<< myCal->cellTemplate[5]<< myCal->cellTemplate[5]<< myCal->cellTemplate[5]<< myCal->cellTemplate[5]<< myCal->cellTemplate[5];
+
     cout << endl << myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0];
     cout << endl << myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1];
-    cout << endl << myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1];
-    cout << endl << myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2];    cout << endl << myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0];
-    cout << endl << myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1];
-    cout << endl << myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1];
-    cout << endl << myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2];    cout << endl << myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0];
-    cout << endl << myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1];
-    cout << endl << myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1];
-    cout << endl << myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2];    cout << endl << myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0];
-    cout << endl << myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1];
-    cout << endl << myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1];
-    cout << endl << myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2];    cout << endl << myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0];
-    cout << endl << myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1];
-    cout << endl << myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1];
-    cout << endl << myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2];    cout << endl << myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0];
-    cout << endl << myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1];
+    cout << endl << myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2];
+    cout << endl << myCal->cellTemplate[3]<< myCal->cellTemplate[3]<< myCal->cellTemplate[3]<< myCal->cellTemplate[3]<< myCal->cellTemplate[3]<< myCal->cellTemplate[3]<< myCal->cellTemplate[3];
+    cout << endl << myCal->cellTemplate[4]<< myCal->cellTemplate[4]<< myCal->cellTemplate[4]<< myCal->cellTemplate[4]<< myCal->cellTemplate[4]<< myCal->cellTemplate[4]<< myCal->cellTemplate[4];
+    cout << endl << myCal->cellTemplate[5]<< myCal->cellTemplate[5]<< myCal->cellTemplate[5]<< myCal->cellTemplate[5]<< myCal->cellTemplate[5]<< myCal->cellTemplate[5]<< myCal->cellTemplate[5];
+
+    cout << endl << myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0];
     cout << endl << myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1];
     cout << endl << myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2];
+    cout << endl << myCal->cellTemplate[3]<< myCal->cellTemplate[3]<< myCal->cellTemplate[3]<< myCal->cellTemplate[3]<< myCal->cellTemplate[3]<< myCal->cellTemplate[3]<< myCal->cellTemplate[3];
+    cout << endl << myCal->cellTemplate[4]<< myCal->cellTemplate[4]<< myCal->cellTemplate[4]<< myCal->cellTemplate[4]<< myCal->cellTemplate[4]<< myCal->cellTemplate[4]<< myCal->cellTemplate[4];
+    cout << endl << myCal->cellTemplate[5]<< myCal->cellTemplate[5]<< myCal->cellTemplate[5]<< myCal->cellTemplate[5]<< myCal->cellTemplate[5]<< myCal->cellTemplate[5]<< myCal->cellTemplate[5];
+
+    cout << endl << myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0];
+    cout << endl << myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1];
+    cout << endl << myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2];
+    cout << endl << myCal->cellTemplate[3]<< myCal->cellTemplate[3]<< myCal->cellTemplate[3]<< myCal->cellTemplate[3]<< myCal->cellTemplate[3]<< myCal->cellTemplate[3]<< myCal->cellTemplate[3];
+    cout << endl << myCal->cellTemplate[4]<< myCal->cellTemplate[4]<< myCal->cellTemplate[4]<< myCal->cellTemplate[4]<< myCal->cellTemplate[4]<< myCal->cellTemplate[4]<< myCal->cellTemplate[4];
+    cout << endl << myCal->cellTemplate[5]<< myCal->cellTemplate[5]<< myCal->cellTemplate[5]<< myCal->cellTemplate[5]<< myCal->cellTemplate[5]<< myCal->cellTemplate[5]<< myCal->cellTemplate[5];
+
+    cout << endl << myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0];
+    cout << endl << myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1];
+    cout << endl << myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2];
+    cout << endl << myCal->cellTemplate[3]<< myCal->cellTemplate[3]<< myCal->cellTemplate[3]<< myCal->cellTemplate[3]<< myCal->cellTemplate[3]<< myCal->cellTemplate[3]<< myCal->cellTemplate[3];
+    cout << endl << myCal->cellTemplate[4]<< myCal->cellTemplate[4]<< myCal->cellTemplate[4]<< myCal->cellTemplate[4]<< myCal->cellTemplate[4]<< myCal->cellTemplate[4]<< myCal->cellTemplate[4];
+    cout << endl << myCal->cellTemplate[5]<< myCal->cellTemplate[5]<< myCal->cellTemplate[5]<< myCal->cellTemplate[5]<< myCal->cellTemplate[5]<< myCal->cellTemplate[5]<< myCal->cellTemplate[5];
+
+    cout << endl << myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0]<< myCal->cellTemplate[0];
+    cout << endl << myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1]<< myCal->cellTemplate[1];
+    cout << endl << myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2]<< myCal->cellTemplate[2];
+    cout << endl << myCal->cellTemplate[3]<< myCal->cellTemplate[3]<< myCal->cellTemplate[3]<< myCal->cellTemplate[3]<< myCal->cellTemplate[3]<< myCal->cellTemplate[3]<< myCal->cellTemplate[3];
+    cout << endl << myCal->cellTemplate[4]<< myCal->cellTemplate[4]<< myCal->cellTemplate[4]<< myCal->cellTemplate[4]<< myCal->cellTemplate[4]<< myCal->cellTemplate[4]<< myCal->cellTemplate[4];
+    cout << endl << myCal->cellTemplate[5]<< myCal->cellTemplate[5]<< myCal->cellTemplate[5]<< myCal->cellTemplate[5]<< myCal->cellTemplate[5]<< myCal->cellTemplate[5]<< myCal->cellTemplate[5];
+
+
+    int test = 2460;
+    test += 3;
+    cout << "\u" test;
+
     return 0;
 }
 

@@ -13,8 +13,11 @@
 class Calendar {
 public:
 //    Date * dates[31];
-    std::string cellTemplate[3] = {u8" ╭────────────────╮ ",
+    std::string cellTemplate[6] = {u8" ╭────────────────╮ ",
                                    u8" │       ①        │ ",
+                                   u8" │                │ ",
+                                   u8" │                │ ",
+                                   u8" │ • Easter       │ ",
                                    u8" ╰────────────────╯ "};
     Calendar();
 
