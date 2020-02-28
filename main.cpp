@@ -7,7 +7,7 @@
 #include <iostream>
 #include <iomanip>
 #include <cmath>
-#include "Justifier.h"
+//#include "Justifier.h"
 #include "Calendar.h"
 #include "Date.h"
 
@@ -62,10 +62,8 @@ int main() {
     cout << endl << myCal->cellTemplate[4]<< myCal->cellTemplate[4]<< myCal->cellTemplate[4]<< myCal->cellTemplate[4]<< myCal->cellTemplate[4]<< myCal->cellTemplate[4]<< myCal->cellTemplate[4];
     cout << endl << myCal->cellTemplate[5]<< myCal->cellTemplate[5]<< myCal->cellTemplate[5]<< myCal->cellTemplate[5]<< myCal->cellTemplate[5]<< myCal->cellTemplate[5]<< myCal->cellTemplate[5];
 
-
-    int test = 2460;
-    test += 3;
-    cout << "\u" test;
+    auto myDate = new Date(7,7,2001);
+    cout << endl << myDate->getBubbleNumber();
 
     return 0;
 }

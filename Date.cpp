@@ -2,6 +2,7 @@
 // Created by Josh Christensen on 2/27/20.
 //
 
+#include <cstdint>
 #include "Date.h"
 
 #ifndef CALENDAR_MOMENT
@@ -33,7 +34,7 @@ int Date::getDayOfWeek() {
     return dow;
 }
 
-static void Date::GetUnicodeChar(unsigned int code, char *chars) {
+void Date::GetUnicodeChar(unsigned int code, char *chars) {
     if (code <= 0x7F) {
         chars[0] = (code & 0x7F); chars[1] = '\0';
     } else if (code <= 0x7FF) {
@@ -56,6 +57,12 @@ static void Date::GetUnicodeChar(unsigned int code, char *chars) {
         chars[2] = 0xEF; chars[1] = 0xBF; chars[0] = 0xBD;
         chars[3] = '\0';
     }
+}
+
+std::string Date::getBubbleNumber() {
+    char chars[5];
+    Date::GetUnicodeChar(bubbleNumStart + day,chars);
+    return std::string(chars);
 }
 
 #endif //CALENDAR_MOMENT

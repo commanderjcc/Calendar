@@ -11,7 +11,7 @@
 
 using namespace std;
 
-Justifer::updateLayout() {
+bool Justifier::updateLayout() {
     cout << resetiosflags(ios::left | ios::right | ios::fixed | ios::showpoint | ios::scientific); //reset everything
 
     //set justification direction
@@ -39,15 +39,15 @@ Justifer::updateLayout() {
     return true;
 }
 
-static void Justifier::toLower(string str) {
+void Justifier::toLower(string str) {
     transform(str.begin(), str.end(), str.begin(), ::tolower);
 }
 
-static void Justifier::toUpper(string str) {
+void Justifier::toUpper(string str) {
     transform(str.begin(), str.end(), str.begin(), ::toupper);
 }
 
-static int Justifier::length(string str) {
+int Justifier::length(string str) {
 
 }
 
@@ -188,5 +188,7 @@ double Justifier::formatNum(double num) {
     num = num / pow(10, precision);
     return num;
 };
+
+
 
 #endif //CALENDAR_JUSTIFIER
