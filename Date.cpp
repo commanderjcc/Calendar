@@ -2,15 +2,18 @@
 // Created by Josh Christensen on 2/27/20.
 //
 
-#include "Moment.h"
+#include "Date.h"
 
-Moment::Moment(uint4 m, uint8 d, int y) {
+#ifndef CALENDAR_MOMENT
+#define CALENDAR_MOMENT
+
+Date::Date(uint8_t m, uint8_t d, int y) {
     month = m;
     day = d;
     year = y;
 }
 
-int Moment::getDayOfWeek() {
+int Date::getDayOfWeek() {
     int d = day;
     int m = month;
     int y = year;
@@ -29,3 +32,5 @@ int Moment::getDayOfWeek() {
 
     return dow;
 }
+
+#endif //CALENDAR_MOMENT
