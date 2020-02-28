@@ -4,9 +4,7 @@
 // Purposes: calc elapsed time for military times, calc roots for parabola, calc intersects for a system of equation
 // Date: 2/4/20
 
-#include <iostream>
-#include <iomanip>
-#include <cmath>
+#include "Justifier.h"
 
 using namespace std;
 

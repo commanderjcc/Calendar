@@ -3,4 +3,4 @@ project(Calendar)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Calendar main.cpp Calendar.cpp Calendar.h Justifier.cpp Justifier.h Color.cpp Color.h)
+add_executable(Calendar main.cpp)
