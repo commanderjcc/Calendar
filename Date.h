@@ -13,6 +13,8 @@ public:
     Date(uint8_t m, uint8_t d, int y);
 
     int getDayOfWeek();
+
+    static void GetUnicodeChar(unsigned int code, char chars[5]);
 };
 
 #endif //CALENDAR_DATE_H

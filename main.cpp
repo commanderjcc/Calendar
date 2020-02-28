@@ -8,9 +8,12 @@
 #include <iomanip>
 #include <cmath>
 #include "Justifier.h"
-#include "Calendar.cpp"
+#include "Calendar.h"
+#include "Date.h"
 
 using namespace std;
+
+
 
 int main() {
     int lol = 1;
