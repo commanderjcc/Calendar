@@ -12,14 +12,11 @@
 
 class Calendar {
 public:
-//    Date * dates[31];
+    Date * dates[31];
     std::string cellTemplate[6] = {u8" ╭────────────────╮ ",
-                                   u8" │       ①        │ ",
-                                   u8" │                │ ",
-                                   u8" │                │ ",
-                                   u8" │ • Easter       │ ",
+                                   u8" | ",          u8" | ",
                                    u8" ╰────────────────╯ "};
-    Calendar();
+    Calendar(short month, int year);
 
     std::string getTopTemplate();
 };
