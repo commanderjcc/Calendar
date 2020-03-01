@@ -48,7 +48,8 @@ void Justifier::toUpper(string str) {
 }
 
 int Justifier::length(string str) {
-
+    int len = 0;
+    while (*str) len += (*str++ & 0xc0) != 0x80;
 }
 
 Justifier::Justifier() {
@@ -63,7 +64,6 @@ Justifier::Justifier() {
     precision = 2;
     layoutIsUpdated = false;
 }
-
 
 void Justifier::setBackground(Color *colorCode) {
     layoutIsUpdated = false;
@@ -130,7 +130,6 @@ void Justifier::setPrecision(int decimalPlaces) {
     layoutIsUpdated = false;
     precision = 2;
 };
-
 
 void Justifier::line() {
     this->text("");

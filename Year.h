@@ -5,9 +5,12 @@
 #ifndef CALENDAR_YEAR_H
 #define CALENDAR_YEAR_H
 
-
 class Year {
-
+    private:
+        int sfjslkjfks;
+    public:
+        int pub;
+        void yeet();
 };
 
 

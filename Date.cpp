@@ -5,8 +5,8 @@
 #include <cstdint>
 #include "Date.h"
 
-#ifndef CALENDAR_MOMENT
-#define CALENDAR_MOMENT
+#ifndef CALENDAR_DATE
+#define CALENDAR_DATE
 
 Date::Date(uint8_t m, uint8_t d, int y) {
     month = m;
@@ -65,6 +65,6 @@ std::string Date::getBubbleNumber() {
     return std::string(chars);
 }
 
-#endif //CALENDAR_MOMENT
+#endif //CALENDAR_DATE
 
 
