@@ -30,15 +30,17 @@ Month::Month(short month, int year) {
         } else {
             days = 30;
         }
-
-        for (int day = 1; day <= 31; day++) {
-            dates[day] = new Date(month, day, year);
-        }
     }
-}
 
-string Month::getTopTemplate() {
-    return this->cellTemplate[0];
+    length = days;
+
+    for (int day = 1; day <= days; day++) {
+        Date * newDate = new Date(month, day, year);
+        int dayOfWeek = newDate->getDayOfWeek();
+        dates[day] = newDate;
+        datesByDayOfWeek[dayOfWeek][numDaysofDayOfWeek[dayOfWeek]] = newDate;
+        numDaysofDayOfWeek[dayOfWeek]++;
+    }
 }
 
 #endif //CALENDAR_MONTH

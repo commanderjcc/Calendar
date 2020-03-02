@@ -11,14 +11,13 @@
 #include "Date.h"
 
 class Month {
+    int numDaysofDayOfWeek[7] = {0, 0, 0, 0, 0, 0, 0};
 public:
     Date * dates[31];
-    std::string cellTemplate[6] = {u8" ╭────────────────╮ ",
-                                   u8" | ",          u8" | ",
-                                   u8" ╰────────────────╯ "};
-    Month(short month, int year);
+    Date * datesByDayOfWeek[7][6];
+    int length;
 
-    std::string getTopTemplate();
+    Month(short month, int year);
 };
 
 #endif //CALENDAR_MONTH_H

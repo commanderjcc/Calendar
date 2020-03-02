@@ -2,10 +2,10 @@
 // Created by Josh Christensen on 2/28/20.
 //
 
-#ifndef CALENDAR_YEAR_H
-#define CALENDAR_YEAR_H
+#ifndef CALENDAR_YEAR
+#define CALENDAR_YEAR
 
 #include "Year.h"
 
 
-#endif //CALENDAR_YEAR_H
+#endif //CALENDAR_YEAR
