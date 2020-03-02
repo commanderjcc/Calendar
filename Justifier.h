@@ -23,14 +23,16 @@ protected:
     bool newLine;
     char fill;
     char numOutputFormat;
-    bool forceDecimal;
+    bool useDecimal;
     int precision;
 public:
     static void toLower(std::string str);
 
     static void toUpper(std::string str);
 
-    static int length(std::string str);
+    static int strLength(std::string str);
+
+    static int length(char str[]);
 
     Justifier();
 
@@ -46,14 +48,13 @@ public:
 
     void setFill(char character);
 
-    void setNumOutputFormat(std::string format);
+    void setNumOutputFormat(const std::string& format);
 
     void showDecimal();
 
     void hideDecimal();
 
-    void setPrecision(int decimalPlaces);
-
+    void setPrecision(uint8_t decimalPlaces);
 
     void line();
 

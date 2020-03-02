@@ -7,6 +7,5 @@
 
 #include "Year.h"
 
-void Year::
 
 #endif //CALENDAR_YEAR_H

@@ -28,8 +28,8 @@ bool Justifier::updateLayout() {
         cout << setiosflags(ios::scientific); //force scientific
     } // leave at auto for all other values
 
-    //set showpoint if forceDecimal is true
-    if (forceDecimal) {
+    //set showpoint if useDecimal is true
+    if (useDecimal) {
         cout << setiosflags(ios::showpoint); //force decimals with ios::showpoint
     }
 
@@ -47,9 +47,18 @@ void Justifier::toUpper(string str) {
     transform(str.begin(), str.end(), str.begin(), ::toupper);
 }
 
-int Justifier::length(string str) {
+int Justifier::strLength(string str) {
+    char char_array[str.length() + 1];
+    strcpy(char_array, str.c_str());
+    return Justifier::length(char_array);
+}
+
+int Justifier::length(char str[]) {
     int len = 0;
-    while (*str) len += (*str++ & 0xc0) != 0x80;
+    while (*str) {
+        len += (*str++ & 0xc0) != 0x80;
+    }
+    return len;
 }
 
 Justifier::Justifier() {
@@ -60,7 +69,7 @@ Justifier::Justifier() {
     newLine = true;
     fill = ' ';
     numOutputFormat = 'a';
-    forceDecimal = false;
+    useDecimal = false;
     precision = 2;
     layoutIsUpdated = false;
 }
@@ -103,36 +112,36 @@ void Justifier::setFill(char character) {
     fill = character;
 };
 
-void Justifier::setNumOutputFormat(string format) {
+void Justifier::setNumOutputFormat(const string& format) {
     layoutIsUpdated = false;
     toLower(format);
 
     if (format == "f" | format == "fixed" | format == "d" | format == "decimal") {
-        justifyDirection = 'f';
+        numOutputFormat = 'f';
     } else if (format == "s" | format == "scientific") {
-        justifyDirection = 's';
+        numOutputFormat = 's';
     } else {
-        justifyDirection = 'a';
+        numOutputFormat = 'a';
     }
-};
+}
 
 void Justifier::showDecimal() {
     layoutIsUpdated = false;
-    forceDecimal = true;
+    useDecimal = true;
 };
 
 void Justifier::hideDecimal() {
     layoutIsUpdated = false;
-    forceDecimal = false;
+    useDecimal = false;
 };
 
-void Justifier::setPrecision(int decimalPlaces) {
+void Justifier::setPrecision(uint8_t decimalPlaces) {
     layoutIsUpdated = false;
-    precision = 2;
+    precision = decimalPlaces;
 };
 
 void Justifier::line() {
-    this->text("");
+    text("");
 };
 
 void Justifier::text(string str) {
@@ -141,7 +150,7 @@ void Justifier::text(string str) {
     }
 
     if (justifyDirection == 'c') {
-        int availableSpace = width - str.length(); //find the amount of space that is available
+        int availableSpace = width - strLength(str); //find the amount of space that is available
         if (availableSpace < 0) { //if the space for justifying is less than 0
             cout << str; //just output as default
             return;
@@ -149,10 +158,10 @@ void Justifier::text(string str) {
         int stringStartLength = availableSpace / 2; //the width before the num
         int stringEndLength =
                 availableSpace - stringStartLength; //the width after the num, uses subtraction to avoid rounding errors
-        cout << setiosflags(ios::left) << setfill(fill) << setw(stringStartLength) << "" << str << setw(stringEndLength)
+        cout << setw(stringStartLength) << "" << str << setw(stringEndLength)
              << ""; //couts the str sandwiched between to pads of setw()
     } else {
-        cout << str; // justify left
+        cout << setw(width) << str; // justify left
     }
 
     if (newLine) {
@@ -162,7 +171,12 @@ void Justifier::text(string str) {
 
 void Justifier::number(double num) {
     if (justifyDirection == 'c') {
-        int availableSpace = width - ((int) (log10(num) + 3)); //find the amount of space that is available
+        if(useDecimal) {
+            width--; //take away decimal point
+            width -= precision; //take away any decimal
+        }
+
+        int availableSpace = width - ((int) (log10(num) + 1)); //find the amount of space that is available
         if (availableSpace < 0) { //if the space for justifying is less than 0
             cout << num; //just output as left justify
             return;
@@ -170,10 +184,13 @@ void Justifier::number(double num) {
         int stringStartLength = availableSpace / 2; //the width before the num
         int stringEndLength =
                 availableSpace - stringStartLength; //the width after the num, uses subtraction to avoid rounding errors
-        cout << setiosflags(ios::left) << setfill(fill) << setw(stringStartLength) << "" << num << setw(stringEndLength)
-             << ""; //couts the num sandwiched between to pads of setw()
+        if(useDecimal) {
+            cout << setw(stringStartLength) << "" << num << setw(stringEndLength) << ""; //couts the num sandwiched between to pads of setw()
+        } else {
+            cout << setw(stringStartLength) << "" << static_cast<int>(num) << setw(stringEndLength) << ""; //couts the num sandwiched between to pads of setw()
+        }
     } else {
-        cout << num; //justify Left
+        cout << setw(width) << num; //justify Left
     }
 
     if (newLine) {
