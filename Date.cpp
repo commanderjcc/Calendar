@@ -61,7 +61,12 @@ void Date::GetUnicodeChar(unsigned int code, char *chars) {
 
 std::string Date::getBubbleNumber() {
     char chars[5];
-    Date::GetUnicodeChar(bubbleNumStart + day,chars);
+    int startNum = bubbleNumStart;
+    if (day > 20) {
+        startNum = bubbleHighNumStart;
+    }
+
+    Date::GetUnicodeChar(startNum + day,chars);
     return std::string(chars);
 }
 

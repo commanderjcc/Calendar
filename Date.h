@@ -11,6 +11,7 @@
 class Date {
 private:
     const short bubbleNumStart = 0x245F;
+    const short bubbleHighNumStart = 0x3250 - 20; //minus 20 for starting the new section at 20
 public:
     uint8_t day;
     uint8_t month;

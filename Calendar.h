@@ -11,9 +11,8 @@
 
 class Calendar {
 public:
-    std::string cellTemplate[6] = {u8" ╭────────────────╮ ",
-                                   u8" | ", u8" | ",
-                                   u8" ╰────────────────╯ "};
+    std::string cellTemplate[6] = {u8"╭", u8"─", u8"╮",
+                                   u8"|", u8"╰",u8"╯"};
 
     Year * years[100];
     explicit Calendar(int targetYear = 2020);
