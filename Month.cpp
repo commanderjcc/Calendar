@@ -10,7 +10,6 @@
 using namespace std;
 
 Month::Month(short month, int year) {
-    short days = 0;
     if (month == 2) {
         if (year % 400 == 0) {
             days = 29;
@@ -32,13 +31,12 @@ Month::Month(short month, int year) {
         }
     }
 
-    length = days;
-
     for (int day = 1; day <= days; day++) {
         Date * newDate = new Date(month, day, year);
         int dayOfWeek = newDate->getDayOfWeek();
         dates[day] = newDate;
         datesByDayOfWeek[dayOfWeek][numDaysofDayOfWeek[dayOfWeek]] = newDate;
+        newDate->nthDayOfWeek = numDaysofDayOfWeek[dayOfWeek];
         numDaysofDayOfWeek[dayOfWeek]++;
     }
 }

@@ -11,11 +11,12 @@
 #include "Date.h"
 
 class Month {
-    int numDaysofDayOfWeek[7] = {0, 0, 0, 0, 0, 0, 0};
+
 public:
-    Date * dates[31];
+    short days = 0;
+    int numDaysofDayOfWeek[7] = {0, 0, 0, 0, 0, 0, 0};
+    Date * dates[32];
     Date * datesByDayOfWeek[7][6];
-    int length;
 
     Month(short month, int year);
 };

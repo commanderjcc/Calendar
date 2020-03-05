@@ -16,6 +16,8 @@ public:
     uint8_t day;
     uint8_t month;
     int year;
+    uint8_t nthDayOfWeek = 0;
+
     Date(uint8_t m, uint8_t d, int y);
 
     int getDayOfWeek();

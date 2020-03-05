@@ -5,12 +5,13 @@
 #ifndef CALENDAR_YEAR_H
 #define CALENDAR_YEAR_H
 
+#include "Month.h"
+
 class Year {
-    private:
-        int sfjslkjfks;
     public:
-        int pub;
-        void yeet();
+        int targetYear;
+        Month * months[13];
+        Year(int targetYear);
 };
 
 

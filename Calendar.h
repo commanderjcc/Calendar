@@ -10,14 +10,28 @@
 #include "Justifier.h"
 
 class Calendar {
+    int startingYear;
+    std::string holidays[13][32];
 public:
+    int targetYear;
+    short targetMonth;
+    short targetDay;
+
     std::string cellTemplate[6] = {u8"╭", u8"─", u8"╮",
                                    u8"|", u8"╰",u8"╯"};
 
     Year * years[100];
-    explicit Calendar(int targetYear = 2020);
+    Calendar(short targetDay, short targetMonth, int targetYear);
 
-    std:: string gT(short);
+    std::string gT(short);
+
+    void drawHeader();
+
+    std::string drawLine();
+
+    std::string drawRow(Date * dates[7]);
+
+    std::string drawCalendar();
 };
 
 
