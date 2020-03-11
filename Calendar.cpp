@@ -27,20 +27,20 @@ Calendar::Calendar(short targetDay, short targetMonth, int targetYear) {
         }
     }
 
-    holidays[1][21]  = "▹ Hugging Day   ";
-    holidays[2][14]  = "▹ Valentines day";
-    holidays[3][17]  = "▹ St. Patricks  ";
-    holidays[4][15]  = "▹ Tax Day       ";
-    holidays[5][5]   = "▹ Cinco De Mayo ";
-    holidays[6][6]   = "▹ D-Day         ";
-    holidays[7][4]   = "▹ Independence  ";
-    holidays[8][26]  = "▹ Women Equality";
-    holidays[9][2]   = "▹ Labor Day     ";
-    holidays[10][31] = "▹ Halloween     ";
-    holidays[11][28] = "▹ Thanksgiving  ";
-    holidays[11][29] = "▹ Black Friday  ";
-    holidays[12][25] = "▹ Christmas     ";
-    holidays[12][31] = "▹ New Years Eve ";
+    holidays[1][21]  = "▹ Hugging Day 🤗";
+    holidays[2][14]  = "▹ Valentines ❤️  ";
+    holidays[3][17]  = "▹ St Patricks 🍀";
+    holidays[4][15]  = "▹ Tax Day 💸    ";
+    holidays[5][5]   = "▹Cinco De Mayo🌮";
+    holidays[6][6]   = "▹ D-Day     💥  ";
+    holidays[7][4]   = "▹ Independence🎆";
+    holidays[8][26]  = "▹ Women Equal 💁";
+    holidays[9][2]   = "▹ Labor Day  👨‍🔧 ";
+    holidays[10][31] = "▹ Halloween  🎃 ";
+    holidays[11][28] = "▹ Thanksgiving🦃";
+    holidays[11][29] = "▹ Black Friday🤑";
+    holidays[12][25] = "▹ Christmas  🎄 ";
+    holidays[12][31] = "▹ New Year Eve🎉";
 }
 
 string Calendar::drawLine() {
@@ -55,7 +55,8 @@ void Calendar::drawHeader() {
     auto temp = new Justifier();
     temp->setWidth(140);
     temp->setDirection("c");
-    temp->text(months[targetMonth]);
+    string yeet = months[targetMonth] + " - " + to_string(targetYear);
+    temp->text(yeet);
     temp->setFill('_');
     temp->line();
     cout << endl;
@@ -80,7 +81,8 @@ string Calendar::drawRow(Date * dates[7]) {
     out += "\n";
     for (int i = 0; i < 7; i++) {
         out += " " + gT(3) + dates[i]->getBubbleNumber();
-        out += dates[i]->day > 20 ? "             " : "              ";
+        out += dates[i]->day == targetDay ? " * " : "   ";
+        out += dates[i]->day > 20 ? "          " : "           ";
         out += " " + gT(3) + " ";
     }
     out += "\n";
@@ -159,7 +161,7 @@ string Calendar::drawCalendar() {
 
     out += "\n---Holidays---\n";
     switch(targetMonth) {
-        case 1: out += "January 1st - New Years"; break;
+        case 1: out += "January 21st - International Hugging Day"; break;
         case 2: out += "February 14th - Valentine's Day"; break;
         case 3: out += "March 17th - Saint Patrick's Day"; break;
         case 4: out += "April 15th - Tax Day"; break;

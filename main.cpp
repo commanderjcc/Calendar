@@ -14,15 +14,12 @@
 
 using namespace std;
 
-
-
-int main() {
+void run() {
     char rawDay[3];
     char rawMonth[3];
     char rawYear[5];
 
     cout << "[Enter a date in the format mm/dd/yyyy]:";
-//    cin.ignore(80,'\n');
     cin.get(rawMonth,3, '/');
     cin.ignore(1);
     cin.get(rawDay,3, '/');
@@ -31,27 +28,24 @@ int main() {
     cin.ignore(1);
 
     auto myCalendar = new Calendar(stoi(rawDay),stoi(rawMonth),stoi(rawYear));
-//    for (int i = 2000; i < 2050; i++) {
-//        myCalendar->targetYear = i;
-//        cout << i << endl;
-//        cout << myCalendar->drawCalendar();
-//    }
+
     string test = myCalendar->drawCalendar();
     cout << test;
-//    for (int i = 1; i < myMonth->length; i++) {
-//        cout << myCalendar->gT(0)
-//             << myCalendar->gT(1) << endl << setw(16) << myMonth->dates[i]->getBubbleNumber() << myCalendar->gT(2) << endl;
-//    }
-//    cout << myCalendar->cellTemplate[0];
-//    cout << endl << "done!" << endl;
-//    cout << "yeet";
+}
 
+int main() {
+    int ans = 0;
 
-//    char chars[5];
-//    int number = 0x3250;
-//    Date::GetUnicodeChar(number + 1,chars);
-//    string test = "㉑";
-//            cout << test << endl;
-//            cout << chars;
+    do {
+        run();
+
+        cout << "Choose an option\n"
+             << "1 - Run Calendar\n"
+             << "0 - Exit\n"
+             << "[Enter a number]: ";
+        cin >> ans;
+        cin.ignore(1,'\n');
+    } while (ans != 0);
+
     return 0;
 }
